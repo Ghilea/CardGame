@@ -1,0 +1,31 @@
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.dll.config
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.deps.json
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.runtimeconfig.json
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.runtimeconfig.dev.json
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.dll
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.csprojAssemblyReference.cache
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.csproj.CoreCompileInputs.cache
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.AssemblyInfoInputs.cache
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.AssemblyInfo.cs
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.pdb
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.dll
+C:\Users\touge\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.pdb
+E:\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.csprojAssemblyReference.cache
+E:\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.csproj.CoreCompileInputs.cache
+E:\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.AssemblyInfoInputs.cache
+E:\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.AssemblyInfo.cs
+E:\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.dll
+E:\OneDrive\Project Appar\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.pdb
+E:\OneDrive\Project Appar\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.dll.config
+C:\Users\touge\Desktop\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.dll.config
+C:\Users\touge\Desktop\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.deps.json
+C:\Users\touge\Desktop\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.runtimeconfig.json
+C:\Users\touge\Desktop\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.runtimeconfig.dev.json
+C:\Users\touge\Desktop\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.dll
+C:\Users\touge\Desktop\CardGames\CardGames\bin\Debug\netcoreapp2.2\CardGames.pdb
+C:\Users\touge\Desktop\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.csprojAssemblyReference.cache
+C:\Users\touge\Desktop\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.csproj.CoreCompileInputs.cache
+C:\Users\touge\Desktop\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.AssemblyInfoInputs.cache
+C:\Users\touge\Desktop\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.AssemblyInfo.cs
+C:\Users\touge\Desktop\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.dll
+C:\Users\touge\Desktop\CardGames\CardGames\obj\Debug\netcoreapp2.2\CardGames.pdb
