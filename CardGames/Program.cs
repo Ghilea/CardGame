@@ -7,8 +7,8 @@ namespace CardGames
     {
         static void Main(string[] args)
         {
-
-            List<string> mainMenu = new List<string> { "Spela Snabbpoker", "Välj spelarnamn", "Visa hichscorelista", "Avsluta" };
+            Console.Title = "Multikortspel";
+            List<string> mainMenu = new List<string> { "Spela Snabbpoker", "Välj spelarnamn", "Visa hichscorelista", "Spara & avsluta" };
 
             //init
             var menu = new Menu();
