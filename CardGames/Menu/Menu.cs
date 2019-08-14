@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Linq;
 
 namespace CardGames
 {
@@ -10,13 +9,6 @@ namespace CardGames
         private MenuList[] list;
 
         //resetar bara raden
-        public void ClearCurrentConsoleLine()
-        {
-            int currentLineCursor = Console.CursorTop;
-            Console.SetCursorPosition(0, Console.CursorTop);
-            Console.Write(new string(' ', Console.WindowHeight));
-            Console.SetCursorPosition(0, currentLineCursor);
-        }
 
         public void SetUpMenuList(List<string> arrList)
         {
@@ -35,7 +27,6 @@ namespace CardGames
             bool InMenu = true;
             string leftArrow = Encoding.Unicode.GetString(Encoding.Unicode.GetBytes("\x25BA"));
             string rightArrow = Encoding.Unicode.GetString(Encoding.Unicode.GetBytes("\x25C4"));
-            bool Start = false;
 
             //gömmer pekare
             Console.CursorVisible = false;
@@ -86,74 +77,25 @@ namespace CardGames
                         switch (MyIndex)
                         {
                             case 0:
-                                Start = false;
                                 QuickPoker();
                                 break;
                             case 1:
-                                PlayerName();
+                                Players.SetPlayerName();
                                 break;
                             case 2:
-                                //GetHighScore();
+                                Players.GetHighScore();
                                 break;
                             case 3:
+                                Players.SavePlayerNameAndHighscore();
                                 Exit();
                                 break;
                         }
                         
                         break;
                 }
-
-                ClearCurrentConsoleLine();
+ 
             }
 
-        }
-
-        public void PlayerName()
-        {
-
-            Console.BackgroundColor = ConsoleColor.DarkGreen;
-
-            Console.SetCursorPosition(40, 10);
-            Console.WriteLine("Skriv in namn för spelare");
-
-            Console.SetCursorPosition(40, 11);
-            Console.Write("Namn: ");
-
-            Players player = new Players();
-            player.PlayerAlias = Console.ReadLine();
-            player.PlayerPoints = 0;
-            player.DrawPlayer();
-            
-        }
-
-        //fixa points
-      /*  private void SaveOnePlayerAlias()
-        {
-            var valueName = new Player { Name = PlayerAlias };
-
-            using (var context = new Context())
-            {
-                context.DPlayer.Add(valueName);
-                context.SaveChanges();
-
-                var id = valueName.Id;
-                var valueScore = new HighScore { Points = PlayerPoints, PlayerId = id };
-                context.DHighScore.Add(valueScore);
-                context.SaveChanges();
-            }
-        }*/
-
-        //fixa highscore
-        private void GetHighScore()
-        {
-            using (var context = new Context())
-            {
-                var items = context.DHighScore.OrderByDescending(u => u.Points).Take(1);
-                var show = items.ToList(); // ToList forces execution
-
-                Console.SetCursorPosition(40, 10);
-                Console.Write("kjlkjdsldkdj TEST "+show);
-            }
         }
 
         private void Exit()
@@ -163,12 +105,10 @@ namespace CardGames
 
         private void QuickPoker()
         {
-            //Console.BackgroundColor = ConsoleColor.DarkGreen;
-            //Console.Clear();
-            Console.Title = "Snabbpoker";
+            Console.Title = "Multikortspel - Snabbpoker";
 
             PlayingCardGame pcg = new PlayingCardGame();
-            pcg.Deal(/*PlayerAlias*/"Player 1", PlayingCard.SIDEUP.OPEN);
+            pcg.Deal();
  
             //PokerMenu();
         }
