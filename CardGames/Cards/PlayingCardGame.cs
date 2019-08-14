@@ -21,7 +21,7 @@ namespace CardGames
             sortedComputerHand = new PlayingCard[5];
         }
 
-        public void Deal(string name, SIDEUP card)
+        public void Deal()
         {
             SetUpDeck(); //create the deck of cards and shuffle them
             GetHand();
@@ -71,12 +71,7 @@ namespace CardGames
 
             int x = 0; //x position of cursor. we move it left and right
             int y = 1; //y position of cursor . we move it up and down
-
-            // display player hand
-            
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.SetCursorPosition(x + 2, y + 1);
-            
+ 
             for (int i = 0; i < 5; i++)
             {
                 DrawCards.DrawCardOutline(sortedPlayerHand[i], x, y);
@@ -86,11 +81,6 @@ namespace CardGames
 
             x = 0; // reset x position
             y = 12; // move the row of the computer cards below the players cards
-            
-            Console.SetCursorPosition(x + 2, y + 1);
-            Console.BackgroundColor = ConsoleColor.DarkGreen;
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine("Dator");
 
             for (int i = 5; i < 10; i++)
             {
@@ -116,41 +106,64 @@ namespace CardGames
             //evaluate hands
             if (playerHand > computerHand)
             {
-                result = "Du vann !";
+                result = Players.PlayerName + " vann!";
+                Players.PlayerPoints += 1;
             }
             else if (playerHand < computerHand)
             {
                 result = "Dator vann!";
+                Players.PlayerPoints -= 1;
             }
             else //if the hands are the same, evaluate the values
             {
                 //first evaluate who has the higher value of poker hand
                 if (playerHandEvaluator.HandValues.Total > computerHandEvaluator.HandValues.Total)
-                    result = "Du vann !";
+                {
+                    result = Players.PlayerName + " vann!";
+                    Players.PlayerPoints += 1;
+                }  
                 else if (playerHandEvaluator.HandValues.Total < computerHandEvaluator.HandValues.Total)
+                {
                     result = "Dator vann!";
+                    Players.PlayerPoints -= 1;
+                }
+                    
                 //if both hands have the same poker hand
                 //then the player with the next highest card wins
                 else if (playerHandEvaluator.HandValues.HighCard > computerHandEvaluator.HandValues.HighCard)
-                    result = "Du vann !";
+                {
+                    result = Players.PlayerName + " vann!";
+                    Players.PlayerPoints += 1;
+                }
                 else if (playerHandEvaluator.HandValues.HighCard < computerHandEvaluator.HandValues.HighCard)
+                {
                     result = "Dator vann!";
+                    Players.PlayerPoints -= 1;
+                }     
                 else
+                {
                     result = "Oavgjort!";
+                }
+                   
             }
 
             int xCoor = 0;
             int yCoor = 0;
 
+            Global.ClearCurrentConsoleLine(yCoor + 14, xCoor + 69);
             Console.SetCursorPosition(xCoor + 69, yCoor + 14);
             Console.WriteLine("{0}", result);
 
             //display each hand
+            Global.ClearCurrentConsoleLine(yCoor + 4, xCoor + 47);
             Console.SetCursorPosition(xCoor + 47, yCoor + 4);
-            Console.WriteLine("Din hand: {0}", playerHand);
+            Console.WriteLine("{0} hand: {1}", Players.PlayerName, playerHand);
 
+            Global.ClearCurrentConsoleLine(yCoor + 25, xCoor + 47);
             Console.SetCursorPosition(xCoor + 47, yCoor + 25);
             Console.WriteLine("Datorns Hand: {0}\n", computerHand);
+
+            Players.DrawPlayer();
         }
 
     }
